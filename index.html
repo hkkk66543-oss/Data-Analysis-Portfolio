@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>罗方宇｜数据分析作品集</title>
+  <style>
+    body {
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      margin: 0;
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 36px 24px;
+    }
+    .hero {
+      background: white;
+      border-radius: 18px;
+      padding: 32px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+      margin-bottom: 28px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 34px;
+    }
+    h2 {
+      margin-top: 36px;
+      border-left: 6px solid #2563eb;
+      padding-left: 12px;
+    }
+    .tag {
+      display: inline-block;
+      background: #e8f1ff;
+      color: #1d4ed8;
+      padding: 6px 12px;
+      border-radius: 999px;
+      margin: 6px 6px 0 0;
+      font-size: 14px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 22px 0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+    .dashboard {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      margin: 16px 0;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+    .summary div {
+      background: #f1f5f9;
+      border-radius: 12px;
+      padding: 14px;
+      text-align: center;
+      font-weight: bold;
+    }
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    ul {
+      padding-left: 22px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <section class="hero">
+      <h1>罗方宇｜数据分析作品集</h1>
+      <p>
+        求职方向：数据分析实习生 / 业务分析实习生 / 数据运营实习生<br>
+        关键词：Excel、SQL、MySQL、Power BI、Python、Pandas、数据清洗、指标分析、业务复盘
+      </p>
+      <div>
+        <span class="tag">SQL 提数与指标计算</span>
+        <span class="tag">Excel 数据校验</span>
+        <span class="tag">Power BI 看板</span>
+        <span class="tag">Python 数据清洗</span>
+        <span class="tag">业务分析报告</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>项目一：Olist 电商平台经营分析项目</h2>
+      <p>
+        基于 Kaggle Olist 多表电商数据，使用 MySQL / Excel / Power BI 完成数据清洗、指标建设、经营分析看板和业务结论输出。
+      </p>
+
+      <img class="dashboard" src="images/olist_overview.png" alt="Olist电商经营分析看板">
+
+      <div class="summary">
+        <div>16 张 ADS 指标表</div>
+        <div>3 页 Power BI 看板</div>
+        <div>5 份 SQL 脚本</div>
+      </div>
+
+      <h3>核心指标</h3>
+      <p>
+        GMV、订单数、AOV、运费占比、延迟送达率、差评率、复购率、RFM 用户分层、支付方式占比、地区分布、品类销售排行。
+      </p>
+
+      <h3>核心结论</h3>
+      <ul>
+        <li>平台复购率约 3%，用户以一次性购买为主，存在用户留存和复购提升空间。</li>
+        <li>延迟送达订单评分更低，差评率更高，物流履约体验对用户评价有明显影响。</li>
+        <li>不同品类和地区的销售贡献差异明显，可结合品类、地区和用户分层进行精细化运营。</li>
+      </ul>
+
+      <p>
+        项目链接：
+        <a href="https://github.com/hkkk66543-oss/sql-ecommerce-analysis" target="_blank">
+          查看 SQL 脚本与项目 README
+        </a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>项目二：电商用户行为分析项目</h2>
+      <p>
+        使用 Python / Pandas 完成用户行为日志数据清洗，分析浏览、加购、收藏、购买等用户行为路径，并使用 Power BI 展示用户行为漏斗和活跃趋势。
+      </p>
+
+      <img class="dashboard" src="images/user_behavior_dashboard.png" alt="电商用户行为分析看板">
+
+      <h3>核心分析方向</h3>
+      <ul>
+        <li>用户行为转化漏斗：浏览、加购、购买等行为转化情况。</li>
+        <li>24 小时用户活跃趋势：识别用户活跃高峰时段。</li>
+        <li>商品类别购买排行：分析不同品类的购买表现。</li>
+        <li>结合行为转化情况，输出用户转化效率和运营优化建议。</li>
+      </ul>
+
+      <p>
+        项目链接：
+        <a href="https://github.com/hkkk66543-oss/E-commerce-User-Behavior-Analysis" target="_blank">
+          查看 Python 清洗项目与 README
+        </a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>项目三：AI 数据分析自动化工作流</h2>
+      <p>
+        围绕数据分析项目从数据理解到看板交付的完整流程，搭建可复用的数据分析 SOP，规范字段检查、SQL 建模、QA 校验和 BI 页面规划。
+      </p>
+
+      <h3>项目产出</h3>
+      <ul>
+        <li>数据分析项目执行流程模板</li>
+        <li>SQL 命名与保存规范</li>
+        <li>ODS / DWD / ADS 分层建模流程</li>
+        <li>QA 校验清单</li>
+        <li>Power BI 页面规划模板</li>
+      </ul>
+
+      <p>
+        项目链接：
+        <a href="https://github.com/hkkk66543-oss/ai-data-workflow" target="_blank">
+          查看数据分析工作流项目
+        </a>
+      </p>
+    </section>
+
+  </div>
+</body>
+</html>
