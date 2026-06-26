@@ -1,154 +1,305 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>数据分析作品集</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>罗方宇｜数据分析作品集</title>
+  <style>
+    * { box-sizing: border-box; }
 
-<style>
-body{
-  margin:0;
-  font-family:"Microsoft YaHei", Arial;
-  background:#f4f6f9;
-  color:#1f2937;
-}
+    body {
+      margin: 0;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      background: #eef3f8;
+      color: #111827;
+      line-height: 1.75;
+    }
 
-.container{
-  max-width:1100px;
-  margin:0 auto;
-  padding:30px 18px;
-}
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
 
-.hero{
-  background:linear-gradient(135deg,#fff,#eef6ff);
-  padding:35px;
-  border-radius:18px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.06);
-}
+    .hero {
+      background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+      border-radius: 22px;
+      padding: 36px 40px;
+      box-shadow: 0 10px 28px rgba(30, 64, 175, 0.08);
+      margin-bottom: 30px;
+    }
 
-h1{margin:0;font-size:34px;}
+    h1 {
+      margin: 0 0 16px;
+      font-size: 38px;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
 
-.sub{color:#4b5563;margin-top:10px;}
+    .subtitle {
+      font-size: 17px;
+      color: #374151;
+      margin-bottom: 20px;
+    }
 
-.tags span{
-  display:inline-block;
-  background:#e0ecff;
-  color:#1d4ed8;
-  padding:6px 12px;
-  margin:6px 6px 0 0;
-  border-radius:999px;
-  font-size:13px;
-}
+    .tags {
+      margin-top: 18px;
+    }
 
-.card{
-  background:#fff;
-  margin-top:22px;
-  padding:28px;
-  border-radius:18px;
-  box-shadow:0 8px 18px rgba(0,0,0,0.05);
-}
+    .tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1d4ed8;
+      padding: 7px 15px;
+      border-radius: 999px;
+      margin: 6px 8px 0 0;
+      font-size: 15px;
+      font-weight: 600;
+    }
 
-h2{
-  border-left:5px solid #2563eb;
-  padding-left:10px;
-  font-size:22px;
-}
+    .card {
+      background: #ffffff;
+      border-radius: 22px;
+      padding: 32px;
+      margin: 28px 0;
+      box-shadow: 0 10px 26px rgba(15, 23, 42, 0.07);
+    }
 
-img{
-  width:100%;
-  border-radius:12px;
-  margin-top:12px;
-  box-shadow:0 6px 16px rgba(0,0,0,0.08);
-}
+    h2 {
+      font-size: 28px;
+      margin: 0 0 18px;
+      padding-left: 14px;
+      border-left: 6px solid #2563eb;
+    }
 
-.desc{
-  color:#4b5563;
-  font-size:14px;
-  line-height:1.6;
-}
+    h3 {
+      font-size: 21px;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
 
-ul{line-height:1.8;}
+    h4 {
+      font-size: 18px;
+      margin: 24px 0 10px;
+      color: #1f2937;
+    }
 
-.highlight{
-  background:#f0f7ff;
-  padding:12px;
-  border-left:4px solid #3b82f6;
-  margin-top:15px;
-  border-radius:10px;
-}
-</style>
+    .project-desc {
+      font-size: 16px;
+      color: #374151;
+      margin-bottom: 18px;
+    }
+
+    .dashboard {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid #e5e7eb;
+      margin: 14px 0 26px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 22px 0 26px;
+    }
+
+    .summary div {
+      background: #f1f5f9;
+      border-radius: 16px;
+      padding: 18px 12px;
+      text-align: center;
+      font-weight: 800;
+      color: #0f172a;
+      font-size: 18px;
+    }
+
+    .highlight {
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+      padding: 18px 22px;
+      border-radius: 14px;
+      margin-top: 18px;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin-top: 8px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .footer {
+      text-align: center;
+      color: #6b7280;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .card {
+        padding: 24px 18px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-<div class="container">
+    <section class="hero">
+      <h1>罗方宇｜数据分析作品集</h1>
+      <p class="subtitle">
+        求职方向：数据分析实习生 / 业务分析实习生 / 数据运营实习生<br>
+        关键词：Excel、SQL、MySQL、Power BI、Python、Pandas、数据清洗、指标分析、业务复盘
+      </p>
 
-<!-- 顶部 -->
-<div class="hero">
-  <h1>数据分析作品集</h1>
-  <div class="sub">SQL · Python · Power BI · Excel</div>
+      <div class="tags">
+        <span class="tag">SQL 提数与指标计算</span>
+        <span class="tag">Excel 数据校验</span>
+        <span class="tag">Power BI 看板</span>
+        <span class="tag">Python 数据清洗</span>
+        <span class="tag">业务分析报告</span>
+      </div>
 
-  <div class="tags">
-    <span>SQL建模</span>
-    <span>Python清洗</span>
-    <span>Power BI</span>
-    <span>用户分析</span>
-    <span>经营分析</span>
+      <h3>核心项目预览：电商经营分析看板</h3>
+      <img class="dashboard" src="images/business-overview.png" alt="电商经营分析Power BI看板">
+
+      <div class="highlight">
+        <strong>项目结果：</strong>
+        基于 MySQL / Excel / Power BI 完成电商经营分析，构建 16 张 ADS 指标表、3 页 Power BI 看板，
+        输出 GMV、订单数、AOV、延迟送达率、差评率、复购率、RFM 用户分层等核心指标。
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>项目一：基于 SQL 的电商平台经营分析项目</h2>
+
+      <p class="project-desc">
+        基于 Kaggle Olist 多表电商数据，使用 MySQL / Navicat / Excel / Power BI 完成数据清洗、指标建设、
+        经营分析看板搭建和业务结论输出，模拟企业数据分析岗位中的提数、建模、报表和复盘流程。
+      </p>
+
+      <div class="summary">
+        <div>16 张 ADS 指标表</div>
+        <div>3 页 Power BI 看板</div>
+        <div>5 份 SQL 脚本</div>
+      </div>
+
+      <h3>Power BI 看板展示</h3>
+
+      <h4>经营总览页</h4>
+      <img class="dashboard" src="images/business-overview.png" alt="经营总览Power BI看板">
+
+      <h4>物流履约页</h4>
+      <img class="dashboard" src="images/logistics-fulfillment.png" alt="物流履约Power BI看板">
+
+      <h4>用户运营页</h4>
+      <img class="dashboard" src="images/user-operation.png" alt="用户运营Power BI看板">
+
+      <h3>核心指标</h3>
+      <p>
+        GMV、订单数、AOV、运费占比、延迟送达率、差评率、复购率、RFM 用户分层、
+        支付方式占比、地区分布、品类销售排行、商家销售排行。
+      </p>
+
+      <h3>核心分析结论</h3>
+      <ul>
+        <li>平台复购率约 3%，用户以一次性购买为主，存在用户留存和复购提升空间。</li>
+        <li>延迟送达订单评分更低、差评率更高，物流履约体验对用户评价有明显影响。</li>
+        <li>不同品类和地区的销售贡献差异明显，可结合品类、地区和用户分层进行精细化运营。</li>
+      </ul>
+
+      <p>
+        项目链接：
+        <a href="https://github.com/hkkk66543-oss/sql-ecommerce-analysis" target="_blank">
+          查看 SQL 脚本与项目 README
+        </a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>项目二：基于 Python 的电商用户行为分析项目</h2>
+
+      <p class="project-desc">
+        基于电商用户行为数据，使用 Python / Pandas 完成数据读取、清洗、字段处理和行为转化统计，
+        并结合 Power BI 输出用户行为漏斗、活跃趋势和商品类别分析结果。
+      </p>
+
+      <img class="dashboard" src="images/e-commerce-user-analysis.png" alt="电商用户行为分析Power BI看板">
+
+      <h3>核心分析方向</h3>
+      <ul>
+        <li>用户行为转化漏斗：分析浏览、加购、收藏、购买等行为路径。</li>
+        <li>24 小时用户活跃趋势：识别用户活跃高峰时段，为运营活动时间选择提供参考。</li>
+        <li>商品类别购买排行：分析不同品类的购买表现和潜在运营机会。</li>
+        <li>结合用户行为转化情况，输出转化效率和运营优化建议。</li>
+      </ul>
+
+      <p>
+        项目链接：
+        <a href="https://github.com/hkkk66543-oss/E-commerce-User-Behavior-Analysis" target="_blank">
+          查看 Python 清洗项目与 README
+        </a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>项目三：AI 数据分析自动化工作流</h2>
+
+      <p class="project-desc">
+        围绕数据分析项目从数据理解到看板交付的完整流程，搭建可复用的数据分析 SOP，
+        规范字段检查、SQL 建模、QA 校验和 BI 页面规划，提升数据分析项目的标准化程度。
+      </p>
+
+      <h3>项目产出</h3>
+      <ul>
+        <li>数据分析项目执行流程模板</li>
+        <li>SQL 命名与保存规范</li>
+        <li>ODS / DWD / ADS 分层建模流程</li>
+        <li>QA 校验清单</li>
+        <li>Power BI 页面规划模板</li>
+      </ul>
+
+      <p>
+        项目链接：
+        <a href="https://github.com/hkkk66543-oss/ai-data-workflow" target="_blank">
+          查看数据分析工作流项目
+        </a>
+      </p>
+    </section>
+
+    <div class="footer">
+      © 罗方宇｜数据分析作品集
+    </div>
+
   </div>
-
-  <div class="highlight">
-    电商数据分析项目合集（经营分析 + 用户分析 + 数据清洗）
-  </div>
-</div>
-
-<!-- 项目一 -->
-<div class="card">
-<h2>项目一：基于 SQL 的电商平台经营分析项目</h2>
-
-<p class="desc">
-基于多表电商数据，完成SQL建模 + 指标体系设计 + Power BI可视化分析。
-</p>
-
-<img src="images/business-overview.png">
-<img src="images/logistics-fulfillment.png">
-<img src="images/user-operation.png">
-
-</div>
-
-<!-- 项目二 -->
-<div class="card">
-<h2>项目二：基于 Python 的电商用户行为分析项目</h2>
-
-<p class="desc">
-使用Python进行数据清洗与用户行为分析，并结合Power BI进行可视化展示。
-</p>
-
-<img src="images/e-commerce-user-analysis.png">
-
-</div>
-
-<!-- 项目三（恢复） -->
-<div class="card">
-<h2>项目三：AI 数据分析自动化工作流</h2>
-
-<p class="desc">
-构建数据分析标准流程（SQL → 清洗 → 建模 → BI → 复盘）。
-</p>
-
-<ul>
-<li>SQL规范化流程</li>
-<li>ODS/DWD/ADS建模</li>
-<li>QA检查机制</li>
-<li>BI页面设计规范</li>
-</ul>
-</div>
-
-<!-- footer -->
-<div style="text-align:center;margin-top:30px;color:#6b7280;">
-© 数据分析作品集
-</div>
-
-</div>
-
 </body>
 </html>
