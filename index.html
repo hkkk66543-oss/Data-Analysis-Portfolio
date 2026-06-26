@@ -1,159 +1,200 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数据分析作品集 - 罗方宇</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>数据分析作品集</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f6f7fb;
-            color: #333;
-        }
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f5f7fb;
+    color:#333;
+}
 
-        .container {
-            width: 90%;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+.header{
+    background:linear-gradient(120deg,#1f4b99,#2d6cdf);
+    color:white;
+    padding:50px 20px;
+}
 
-        header {
-            background: #1f4b99;
-            color: white;
-            padding: 40px 0;
-        }
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 28px;
-        }
+h1{margin:0;font-size:30px;}
+.sub{opacity:0.9;margin-top:8px;}
 
-        header p {
-            margin: 8px 0 0;
-            opacity: 0.9;
-        }
+.section{
+    margin:35px 0 10px;
+    font-size:20px;
+    border-left:5px solid #2d6cdf;
+    padding-left:10px;
+}
 
-        .card {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
+.card{
+    background:white;
+    padding:22px;
+    margin:20px 0;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
 
-        h2 {
-            border-left: 5px solid #1f4b99;
-            padding-left: 10px;
-        }
+.tags span{
+    background:#eef3ff;
+    color:#2d6cdf;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    margin-right:6px;
+}
 
-        .project-img {
-            width: 100%;
-            border-radius: 10px;
-            margin-top: 10px;
-            border: 1px solid #eee;
-        }
+img{
+    width:100%;
+    border-radius:10px;
+    border:1px solid #eee;
+}
 
-        .tag {
-            display: inline-block;
-            background: #eef3ff;
-            color: #1f4b99;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            margin-right: 5px;
-        }
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-bottom:15px;
+}
 
-        a.button {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: #1f4b99;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-        }
+.grid img{
+    height:180px;
+    object-fit:cover;
+}
 
-        a.button:hover {
-            background: #163a73;
-        }
+.title{
+    font-weight:bold;
+    margin-top:15px;
+}
 
-        ul {
-            line-height: 1.8;
-        }
-    </style>
+ul{
+    line-height:1.8;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <div class="container">
-        <h1>罗方宇 · 数据分析作品集</h1>
-        <p>Python | SQL | Power BI | 数据分析 | 业务洞察</p>
-    </div>
-</header>
+<div class="header">
+<div class="container">
+<h1>罗方宇 · 数据分析作品集</h1>
+<div class="sub">SQL · Python · Power BI · 用户行为分析 · 经营分析</div>
+</div>
+</div>
 
 <div class="container">
 
-    <!-- 项目1 -->
-    <div class="card">
-        <h2>项目一：电商用户行为分析（Power BI）</h2>
+<!-- ================= 项目1 ================= -->
+<div class="section">项目一：电商用户行为分析（Power BI核心项目）</div>
 
-        <span class="tag">Python</span>
-        <span class="tag">SQL</span>
-        <span class="tag">Power BI</span>
+<div class="card">
 
-        <p>
-            基于电商用户行为数据，完成数据清洗、指标体系构建与可视化分析，
-            输出用户转化路径、活跃趋势与商品分析。
-        </p>
+<div class="tags">
+<span>Python</span><span>SQL</span><span>Power BI</span>
+</div>
 
-        <img class="project-img" src="images/dashboard_final.png" alt="BI看板">
+<!-- ⭐ BI先展示（重点） -->
+<div class="title">Power BI 核心看板展示</div>
+<img src="images/dashboard_final.png">
 
-        <ul>
-            <li>用户行为漏斗分析（view → cart → purchase）</li>
-            <li>24小时活跃趋势分析</li>
-            <li>商品类别购买排行</li>
-            <li>用户转化率与运营建议</li>
-        </ul>
+<div class="grid">
+<img src="images/e-commerce-user-analysis.png">
+<img src="images/user-operation.png">
+<img src="images/logistics-fulfillment.png">
+</div>
 
-        <a class="button" href="https://github.com/hkkk66543-oss/E-commerce-User-Behavior-Analysis" target="_blank">
-            查看项目
-        </a>
-    </div>
+<p class="title">项目概述</p>
+<p>
+基于用户行为日志（浏览、加购、支付、订单），构建完整用户行为分析体系，
+完成从数据清洗 → 指标体系 → BI可视化 → 业务洞察的全流程分析。
+</p>
 
-    <!-- 项目2 -->
-    <div class="card">
-        <h2>项目二：SQL电商分析</h2>
+<p class="title">核心分析方法</p>
+<ul>
+<li>构建用户行为漏斗（View → Cart → Purchase）</li>
+<li>分析用户活跃时间分布（小时级+日级趋势）</li>
+<li>多维拆解商品类别贡献与转化效率</li>
+<li>基于用户行为构建分层（活跃/沉睡/高价值）</li>
+</ul>
 
-        <span class="tag">SQL</span>
-        <span class="tag">数据建模</span>
+<p class="title">业务结论</p>
+<ul>
+<li>用户以“低频浏览型”为主，转化率偏低</li>
+<li>物流延迟显著降低用户评分与复购率</li>
+<li>用户活跃呈现明显双峰结构（上午+晚间）</li>
+</ul>
 
-        <p>
-            使用 SQL 完成电商数据建模与分析，构建指标体系与经营分析模型。
-        </p>
+</div>
 
-        <a class="button" href="https://github.com/hkkk66543-oss/sql-ecommerce-analysis" target="_blank">
-            查看SQL项目
-        </a>
-    </div>
+<!-- ================= 项目2 ================= -->
+<div class="section">项目二：电商SQL建模与经营分析</div>
 
-    <!-- 项目3 -->
-    <div class="card">
-        <h2>项目三：AI数据分析工作流</h2>
+<div class="card">
 
-        <span class="tag">Python</span>
-        <span class="tag">自动化</span>
+<div class="tags">
+<span>SQL</span><span>数据建模</span>
+</div>
 
-        <p>
-            搭建标准化数据分析流程，实现从数据理解到BI输出的自动化框架。
-        </p>
+<!-- ⭐ BI先展示 -->
+<div class="title">经营分析可视化</div>
+<div class="grid">
+<img src="images/e-commerce-user-analysis.png">
+<img src="images/logistics-fulfillment.png">
+<img src="images/user-operation.png">
+</div>
 
-        <a class="button" href="https://github.com/hkkk66543-oss/ai-data-workflow" target="_blank">
-            查看工作流
-        </a>
-    </div>
+<p class="title">项目概述</p>
+<p>
+基于Olist电商多表数据，完成ODS→DWD→ADS分层建模，构建标准化经营分析体系。
+</p>
+
+<p class="title">分析内容</p>
+<ul>
+<li>SQL多表JOIN（订单/支付/用户/物流）</li>
+<li>GMV / 客单价 / 复购率指标体系构建</li>
+<li>用户分层与生命周期分析</li>
+<li>物流延迟与评分关系分析</li>
+</ul>
+
+</div>
+
+<!-- ================= 项目3 ================= -->
+<div class="section">项目三：AI数据分析自动化工作流</div>
+
+<div class="card">
+
+<div class="tags">
+<span>Python</span><span>自动化</span>
+</div>
+
+<div class="title">流程可视化</div>
+<div class="grid">
+<img src="images/business-overview.png">
+<img src="images/user-operation.png">
+<img src="images/logistics-fulfillment.png">
+</div>
+
+<p class="title">项目概述</p>
+<p>
+设计标准化数据分析工作流，实现从数据理解到BI输出的自动化流程体系。
+</p>
+
+<p class="title">核心能力</p>
+<ul>
+<li>标准化分析流程（EDA → SQL → BI）</li>
+<li>统一指标体系与SQL规范</li>
+<li>可复用BI模板与分析结构</li>
+</ul>
+
+</div>
 
 </div>
 
